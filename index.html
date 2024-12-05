@@ -13,47 +13,29 @@
     <!-- search bar -->
     <header class="container mx-auto">
         <div id="search-container" class="relative flex justify-center items-center">
-            <input type="text" placeholder="Search by Category" class="bg-white border border-black px-2 py-2 md:px-5 md:py-3 md:w-[500px]">
-            <button class="absolute translate-x-20 md:translate-x-56 lg:translate-x-72 bg-gray-500 px-2 py-2.5 md:px-5 md:py-3.5 rounded-r-lg text-white hover:bg-blue-700">Search</button>
+            <input id="search-field" type="text" placeholder="Search by Category" class="bg-white border border-black px-2 py-2 md:px-5 md:py-3 md:w-[500px]">
+            <button onclick="handleSearch()" class="absolute translate-x-20 md:translate-x-56 lg:translate-x-72 bg-gray-500 px-2 py-2.5 md:px-5 md:py-3.5 rounded-r-lg text-white hover:bg-blue-700">Search</button>
         </div>
     </header>
 
     <main class="container mx-auto my-20">
+        <section class="">
+            <!-- spinner -->
+             <div id="spinner" class="flex justify-center my-20">
+                <img src="./image/spinner.gif" alt="">
+             </div>
+
+            <!-- not found  -->
+           <div id="notFoundContainer" class="hidden flex justify-center my-20">
+               <img src="./image/not-found.png" alt="">
+           </div>
+        </section>
 
         <section class="flex flex-col md:flex-row justify-between gap-5 p-2">
             <!-- all products -->
-            <div class="flex-1 grid grid-cols-1 gap-5">
-                <div class="rounded-lg bg-blue-400 py-10 px-5 shadow-lg ">
-                    <div class="flex justify-center">
-                        <img class="w-52" src="./image/star.png" alt="">
-                    </div>
-                    <h3 class="text-xl font-bold my-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h3>
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <p class="font-bold text-xl">Price: <span>000 $</span></p>
-                        </div>
-                        <div>
-                            <button class="bg-gray-500 px-3 py-2 text-white">men's clothing</button>
-                        </div>
-                    </div>
-                    <hr class="border border-gray-600 my-5">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-5">
-                        <div class="flex items-center gap-3">
-                            <img class="w-10" src="./image/view.png" alt="">
-                            <p class="text-black font-bold">450</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <img class="w-10" src="./image/star.png" alt="">
-                            <p class="text-black font-bold">4.5/5</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <button class="bg-cyan-300 px-4 py-2 rounded-lg text-black">Add to Cart</button>
-                        </div>
-                    </div>
+            <div id="allProductsContainer" class="flex-1 grid grid-cols-1 gap-5">
 
-    
-                </div>
-                <div class="rounded-lg bg-blue-400 p-5 shadow-lg ">
+                <!-- <div class="rounded-lg bg-blue-400 p-5 shadow-lg ">
                     <div class="flex justify-center border border-red-500">
                         <img class="w-52" src="./image/star.png" alt="">
                     </div>
@@ -82,21 +64,24 @@
                     </div>
 
     
-                </div>
+                </div> -->
             </div>
             <!-- name price -->
-             <div class="bg-gray-300 shadow-lg p-10 md:w-2/4">
+             <div id="namePriceContainer" class="bg-gray-300 shadow-lg p-10 md:w-[350px] lg:w-2/4">
+                 <p class=" text-xl text-center mb-3">Mark as read (<span id="mark-count" class="text-blue-700"> 0 </span>)</p>
+                 <hr class="border border-black my-3">
                 <div class="flex justify-around items-center ">
                     <h3 class="text-xl font-bold ">Name</h3>
                     <p class="text-xl font-bold ">Price</p>
                 </div>
                 <div class="border border-black my-3 w-full"></div>
                 <div id="showNamePrice">
-
                 </div>
             </div>
 
         </section>
+
+
     </main>
     <footer class="container mx-auto"></footer>
 
