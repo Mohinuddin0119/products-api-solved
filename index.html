@@ -9,7 +9,95 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="bg-white min-h-screen text-black py-10">
+    <!-- search bar -->
+    <header class="container mx-auto">
+        <div id="search-container" class="relative flex justify-center items-center">
+            <input type="text" placeholder="Search by Category" class="bg-white border border-black px-2 py-2 md:px-5 md:py-3 md:w-[500px]">
+            <button class="absolute translate-x-20 md:translate-x-56 lg:translate-x-72 bg-gray-500 px-2 py-2.5 md:px-5 md:py-3.5 rounded-r-lg text-white hover:bg-blue-700">Search</button>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-20">
+
+        <section class="flex justify-between gap-5">
+            <!-- all products -->
+            <div class="flex-1 grid grid-cols-1 gap-5">
+                <div class="rounded-lg bg-blue-400 py-10 px-5 shadow-lg ">
+                    <div class="flex justify-center">
+                        <img class="w-52" src="./image/star.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold my-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h3>
+                    <div class="flex justify-between">
+                        <div>
+                            <p >Price: <span>000 $</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-gray-500 px-3 py-2 text-white">men's clothing</button>
+                        </div>
+                    </div>
+                    <hr class="border border-gray-600 my-5">
+                    <div class="flex justify-between">
+                        <div class="flex items-center gap-3">
+                            <img class="w-10" src="./image/view.png" alt="">
+                            <p class="text-black font-bold">450</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img class="w-10" src="./image/star.png" alt="">
+                            <p class="text-black font-bold">4.5/5</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="bg-cyan-300 px-4 py-2 rounded-lg text-black">Add to Cart</button>
+                        </div>
+                    </div>
+
     
+                </div>
+                <div class="rounded-lg bg-blue-400 p-5 shadow-lg ">
+                    <div class="flex justify-center border border-red-500">
+                        <img class="w-52" src="./image/star.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold my-3">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h3>
+                    <div class="flex justify-between">
+                        <div>
+                            <p >Price: <span>000 $</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-gray-500 px-3 py-2 text-white">men's clothing</button>
+                        </div>
+                    </div>
+                    <hr class="border border-gray-600 my-5">
+                    <div class="flex justify-between">
+                        <div class="flex items-center gap-3">
+                            <img class="w-10" src="./image/view.png" alt="">
+                            <p class="text-black font-bold">450</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img class="w-10" src="./image/star.png" alt="">
+                            <p class="text-black font-bold">4.5/5</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="bg-cyan-300 px-4 py-2 rounded-lg text-black">Add to Cart</button>
+                        </div>
+                    </div>
+
+    
+                </div>
+            </div>
+            <!-- name price -->
+             <div class="flex-1 bg-gray-300 shadow-lg p-10">
+                <div class="flex justify-around items-center ">
+                    <h3 class="text-xl font-bold ">Name</h3>
+                    <p class="text-xl font-bold ">Price</p>
+                </div>
+                <div class="border border-black my-3 w-full"></div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="container mx-auto"></footer>
+
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
